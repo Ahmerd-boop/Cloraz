@@ -1,0 +1,271 @@
+/*style for all elements*/
+*{
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+/*body style*/
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*fixed header style*/
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(189, 49, 49, 0.2);
+}
+/*logo style*/
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    font-style: italic;
+}
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}            
+#clo{
+    color: red;
+}
+#R{
+    text-decoration: overline;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+    text-decoration-style: wavy;
+}
+/*body links style*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav li{
+    margin-right: 25px;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    transition: red 0.2s ease;
+}
+/*active home style*/
+.active-about{
+    border-bottom: 1px solid red;
+    padding-bottom: 8px;
+    color: red;
+}
+nav a:hover{
+    color: red;
+    border-bottom: 1px solid red;
+    padding-bottom: 8px;
+}
+/*paragraphs style*/
+p{
+    word-spacing: 3px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: justify;
+}
+/*home style*/
+.about{
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+   max-width: 100%;
+}
+/*footer style*/
+.footer-content{
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
+}
+/*portfolio link*/
+.portfolio-link{
+    text-decoration: none;
+    color: red;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 30px;
+}
+.portfolio-link:hover{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 30px;
+}
+/*headings style*/
+h2{
+    color: red;
+    text-align: center;
+    font-family: fantasy;
+    text-shadow: 2px 2px 3px #333;
+}
+/*form*/
+.form-container{
+    margin: 40px;
+    padding: 15px;
+    background: #333;
+    color: white;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+
+}
+h3{
+    text-align: center;
+}
+.input-cnt{
+    display: flex;
+    margin-bottom: 15px;
+}
+.input-cnt > i{
+    max-width: 40px;
+    padding: 10px;
+    text-align: center;
+    background: lightgray;
+    color: #333;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.input-cnt:hover > i{
+    background: #333;
+    color: white;
+}
+.input-cnt>input[type="text"], .input-cnt>input[type="password"], .input-cnt>input[type="email"], .input-cnt>input[type="search"], .input-cnt>textarea[type="text"]{
+    outline: none;
+    border: none;
+    padding: 10px;
+    border: 1px solid #333;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+} 
+.input-cnt>input[type="submit"] {
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    width: 75%;
+    margin: 0 auto;
+    font-size: 105%;
+    padding: 8px;
+    color: #333;
+    background: white;
+    transition-duration: .5s;
+}
+.input-cnt>input[type="submit"]:hover{
+    color: white;
+    background: #333;
+}
+.error{
+ color: red;
+ color: 14px;
+ margin-bottom: 10px;   
+}
+.success{
+    color: green;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+/*Terms and Services*/
+.terms{
+    font-size: 15px;
+}
+@media only screen and (max-width: 768px) {
+    .about{
+        margin-top: 120px;
+        margin-left: 20px;
+        margin-right: 20px;
+       max-width: 100%;
+    }
+    /*portfolio link*/
+    .portfolio-link{
+        text-decoration: none;
+        color: red;
+        text-align: center;
+        font-family: fantasy;
+        font-size: 20px;
+    }
+    .portfolio-link:hover{
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        font-family: fantasy;
+        font-size: 20px;
+    }
+    /*form*/
+    .form-container{
+        margin: 0px;
+        padding: 15px;
+        background: #333;
+        color: white;
+        border-radius: 4px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    
+    }
+    .input-cnt{
+        display: flex;
+        margin-bottom: 15px;
+    }
+    .input-cnt > i{
+        max-width: 40px;
+        padding: 10px;
+        text-align: center;
+        background: lightgray;
+        color: #333;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .input-cnt:hover > i{
+        background: #333;
+        color: white;
+    }
+    .input-cnt>input[type="text"], .input-cnt>input[type="password"], .input-cnt>input[type="email"], .input-cnt>input[type="search"], .input-cnt>textarea[type="text"]{
+        outline: none;
+        border: none;
+        padding: 10px;
+        border: 1px solid #333;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 20px;
+        width: 100%;
+    
+    
+    } 
+    .input-cnt>input[type="submit"] {
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        width: 75%;
+        margin: 0 auto;
+        font-size: 105%;
+        padding: 8px;
+        color: #333;
+        background: white;
+        transition-duration: .5s;
+    }
+    .input-cnt>input[type="submit"]:hover{
+        color: white;
+        background: #333;
+    }
+ /*Terms and Services*/
+.terms{
+    font-size: 12px;
+}
+   
+}

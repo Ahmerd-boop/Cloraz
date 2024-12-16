@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Corel Draw Tutorials</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" class="">
+    <link rel="stylesheet" href="iframes.css" class="">
+    <script async src="https://pagead2.googlesyndication.com/pagead2/js/adsbygoogle.js?client=ca-pub-5066628083376319" crossorigin="anonymous"></script>
+</head>
+<script>
+    let currentPlayer = null;
+const iframes = document.querySelectorAll('iframe');
+const players = [];
+iframes.forEach((iframe, index) => {
+    const player = new YT.Player(iframe, {
+        events: {
+            onStateChange: (event) => handleStateChange(event, player)
+        }
+    });
+    players.push(player);
+});
+function handleStateChange(event, player) {
+    if (event.data === YT.PlayerState.PLAYING) {
+        if (currentPlayer && currentPlayer !== player) {
+            currentPlayer.pauseVideo();
+        }
+        currentPlayer = player 
+    }
+}
+function onYouTubeIframeAPIReady() {
+    console.log("YouTube API is ready.");
+}
+const tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+const firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
+
+const iframe = document.querySelectorAll('iframe');
+iframes.forEach((iframe) => {
+    iframe.addEventListener('play', () => {
+        iframes.forEach((otherIframe) => {
+    if (otherIframe !== iframe) {
+        otherIframe.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    }
+});
+});
+});
+</script>
+<body>
+    <!--main division-->
+    <div class="main">
+        <!-- a fixed header-->
+        <header class="fixed-header">
+            <!--cloRaz logo-->
+            <div class="logo">
+                <a href="#">
+                    <span id="clo">clo</span><span id="R"><i>R</i></span><span id="az">az</span>
+                </a>
+            </div>
+            <!--body links-->
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="library.html" class="active-library">Library</a></li>
+                    <li><a href="about.html" class="">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    <!--container division-->
+<div class="container">
+    <h3>Corel Draw Tutorials</h3><br><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=mbpoxL_kCNE&list=PLCT625VX33gRhP7OmAJoLpNTboYkMqa_F?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mbpoxL_kCNE?si=YgJ75JxQ_z6BskiT?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SKcq_O0GZYc?si=Y_bf4CyMMiQ0xYSi?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UixqHznz5GE?si=yZ0UOmVKedpPSJDt?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nOUXF0NlWj0?si=huT29bmsPytku5RR?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Esqvsy-dxrU?si=E3Ucyv9IQbNGmx7T?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SKcq_O0GZYc?si=VyXA5iDXQAGFBNXr?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/P5vKMsbuwaQ?si=jH-kSl71zmltppJV?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/V6ctGxmYjtE?si=2x-CziyAAeHD6uSj?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6bV16XFG7Ok?si=TpLYKOiTK1DPP9QV?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bj3BRytJ77I?si=kthT0_6QbjKNzE2w?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yICHXMbmYMA?si=1EYFo_5Qyzdh77CK?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/e0gEmiJ8aYk?si=X0pv-KRrXKTuk9f_?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+</div> 
+<!--footer division-->
+<div class="footer">
+    <!--horizantal rule line-->
+    <hr style="color: black; max-width: 100%;">
+    </hr>
+    <p class="footer-content">
+        <b>2025 &copy;</b> cloRaz Website | All Right Reserve.
+    </p>
+</div>
+    </div>
+</body>

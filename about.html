@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="about.css" class="">
+    <link rel="stylesheet" href="index.css" class="">
+</head>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); 
+  let name = document.getElementById('name').value;
+  let surname = document.getElementById('surname').value;  
+  let email = document.getElementById('email').value;  
+  let message = document.getElementById('message').value;
+  if (name && surname && message){
+    let formData = new formData();
+    formData.append('name', name);
+    formData.append('surname', surname);
+    formData.append('message', message);
+let xhr = new XMLHttpRequest();
+xhr.open('POST', 'submit_form.php', true);
+xhr.onreadystatechange = function()
+{
+    if (xhr.readyState === 4){
+        if (xhr.status === 200) {
+            document.getElementById('responseMessage').innerHTML="Thank you for contacting us! Have a nice day.";
+            document.getElementById('responseMessage').classList.remove('error');
+
+        }
+        else{
+            document.getElementById('responseMessage').innerHTML="Sorry, there was an error sending your message. Please try again later.";
+            document.getElementById('responseMessage').classList.add('error');
+        }
+    }
+};
+xhr.send(formData);
+  }  
+  else{
+    document.getElementById('responseMessage').innerHTML="Please fill in required fields";
+    document.getElementById('responseMessage').classList.add('error');
+  }
+
+});
+</script>
+<body>
+    <!--main division-->
+    <div class="main">
+        <!-- a fixed header-->
+        <header class="fixed-header">
+            <!--cloRaz logo-->
+            <div class="logo">
+                <a href="#">
+                    <span id="clo">clo</span><span id="R"><i>R</i></span><span id="az">az</span>
+                </a>
+            </div>
+            <!--body links-->
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="library.html" class="">Library</a></li>
+                    <li><a href="about.html" class="active-about">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--about links-->
+        <div class="about">
+            <p>Welcome to <i>cloRax</i> watching website, we are a team of passionate 
+                individuals dedicated to providing the best possible experience 
+                for our users. We are committed to excellence and continually seek ways to improve 
+                our Services. My mission is to share my create work, connect with like-minded 
+                individuals, and continuosly improve my skills. I strive to 
+                create innovative and effective solutions that inspire and engage. Atlast, I will like you to  visit my MFP
+                <p><h2><a href="https://ahmerdportfolio2024.netlify.app/" class="portfolio-link"><b>My Portfolio</b></a></h2></p>
+            </p>  
+        <br><br>
+        <p>We will love to hear from you! Whether you have an advise, question, comment or just want to say <i>hello</i>, please don't hesitate to reach out. Please get in touch with us.</p><br><br>        
+        <!--contact form-->
+        <div class="form-container">
+            <h3>Contact Form</h3>
+                <form id="contact-form" action="submit_form.php" method="POST">
+                    <div class="input-cnt">
+                        <i class="material-icons">person</i>
+                        <input type="text" placeholder="Name" name="name">
+                    </div>
+                    
+                    <div class="input-cnt">
+                        <i class="material-icons">face</i>
+                        <input type="text" placeholder="Surname" name="surname">
+                    </div>
+                    
+                    <div class="input-cnt">
+                        <i class="material-icons">email</i>
+                        <input type="email" placeholder="Email" name="email">
+                    </div>
+                    
+                    <div class="input-cnt">
+                        <i class="material-icons">comment</i>
+                        <textarea rows="10" type="text" placeholder="Drop Your Comment Here..." name="message"></textarea>
+                    </div>
+                    <div class="input-cnt">
+                        <input type="submit" id="submit-button" name="submit" value="Submit">
+                    </div>
+                </form>
+            </div><br><br><br><br>
+            <!--Terms and Services-->
+            <h4>Terms and Services</h4>
+<figure class="terms">Our website provides access to a wide range of vedio contents, Below are what we permitted you to: <br>
+<ul>
+<li>You can download any video available in this website.</li>
+<li>You can use our vedios links and embed links.</li>
+<li>Atlast, No permission denied.</li>
+</ul>
+</figure>
+        </div>
+        <!--footer division-->
+        <br><br>
+        <div class="footer">
+            <!--horizantal rule line-->
+            <hr style="color: black; max-width: 100%;">
+            </hr>
+            <p class="footer-content">
+                <b>2025 &copy;</b> cloRaz Website | All Right Reserve.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

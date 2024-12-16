@@ -1,0 +1,219 @@
+/*style for all elements*/
+*{
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+/*body style*/
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*fixed header style*/
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(189, 49, 49, 0.2);
+}
+/*logo style*/
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    font-style: italic;
+}
+.logo a {
+    color: #fff;
+    text-decoration: none;
+}            
+#clo{
+    color: red;
+}
+#R{
+    text-decoration: overline;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+    text-decoration-style: wavy;
+}
+/*body links style*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav li{
+    margin-right: 25px;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    transition: red 0.2s ease;
+}
+/*active home style*/
+.active-library{
+    border-bottom: 1px solid red;
+    padding-bottom: 8px;
+    color: red;
+}
+nav a:hover{
+    color: red;
+    border-bottom: 1px solid red;
+    padding-bottom: 8px;
+}
+/*paragraphs style*/
+p{
+    word-spacing: 3px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: justify;
+}
+/*home style*/
+.library{
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+   max-width: 100%;
+}
+.headings{
+    color: red;
+    text-align: center;
+    font-size: 25px;
+}
+.library-link{
+    width: 100%;
+    display: block;
+    background: #333;
+    padding: 30px;
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0px;
+    border-bottom: 1px solid rgb(126, 24, 24);
+}
+.library-link:hover{
+    background: #ccc;
+    color: red;
+    border: none;
+}
+/*footer style*/
+.footer-content{
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
+}
+@media only screen and (max-width: 768px) {
+    .logo{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: monospace;
+        font-style: italic;
+    }
+    .logo a {
+        color: #fff;
+        text-decoration: none;
+    }            
+    #clo{
+        color: red;
+    }
+    #R{
+        text-decoration: overline;
+        text-decoration-color: red;
+        text-decoration-thickness: 2px;
+        text-decoration-style: wavy;
+    }
+    /*body links style*/
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    nav li{
+        margin-right: 18px;
+    }
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 10px;
+        transition: red 0.2s ease;
+    }
+    /*active home style*/
+    .active-library{
+        border-bottom: 1px solid red;
+        padding-bottom: 5px;
+        color: red;
+    }
+    nav a:hover{
+        color: red;
+        border-bottom: 1px solid red;
+        padding-bottom: 5px;
+    }
+    /*home style*/
+    .library{
+        margin-top: 120px;
+        margin-left: 15px;
+        margin-right: 15px;
+       max-width: 100%;
+    }
+    /*paragraphs style*/
+    p{
+        word-spacing: 3px;
+        line-height: 25px;
+        font-size: 18px;
+        text-align: justify;
+    }
+    
+    /*headings style*/
+    h2{
+        color: red;
+        text-align: center;
+        font-family: fantasy;
+        text-shadow: 2px 2px 3px #333;
+    }
+    /*footer style*/
+    .footer-content{
+        font-size: 11px;
+        text-align: center;
+        font-style: italic;
+    }   
+    .headings{
+        color: red;
+        text-align: center;
+        font-size: 15px;
+    }
+ 
+.library-link{
+    width: 100%;
+    display: block;
+    background: #333;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0px;
+    border-bottom: 1px solid rgb(126, 24, 24);
+}
+.library-link:hover{
+    background: #ccc;
+    color: red;
+    border: none;
+}       
+}

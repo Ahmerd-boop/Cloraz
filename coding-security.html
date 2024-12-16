@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Security Authentication</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" class="">
+    <link rel="stylesheet" href="iframes.css" class="">
+    <script async src="https://pagead2.googlesyndication.com/pagead2/js/adsbygoogle.js?client=ca-pub-5066628083376319" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--main division-->
+    <div class="main">
+        <!-- a fixed header-->
+        <header class="fixed-header">
+            <!--cloRaz logo-->
+            <div class="logo">
+                <a href="#">
+                    <span id="clo">clo</span><span id="R"><i>R</i></span><span id="az">az</span>
+                </a>
+            </div>
+            <!--body links-->
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="library.html" class="active-library">Library</a></li>
+                    <li><a href="about.html" class="">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    <!--container division-->
+<div class="container">
+    <p id="warning">⚠️ Please Provide a Valid Password</p><br>
+  <div class="input-cnt">
+    <i class="material-icons">person</i>
+    <input type="password" id="password" placeholder="Password" name="password">
+    </div><br><br><br><br><br>
+  <button onclick="checkPassword()" class="submit-btn">Enter</button><br><br><br>
+  <a id="protected-link" class="library-link" href="coding tutorials.html" style="display: none;">Beautiful Coding Tutorials</a><br><br>
+<script>
+  function checkPassword() {
+      var password = document.getElementById("password").value;
+      if (password ==="112567") {
+        document.getElementById("protected-link").style.display = "block";
+        document.getElementById("protected-link").href ="coding tutorials.html";
+      alert("Correct Password");
+      }
+      else{
+        alert("😂 Incorrect Password");
+      }
+    }
+  </script>  
+</div><br><br><br><br><br><br><br><br><br><br><br> 
+<!--footer division-->
+<div class="footer">
+    <!--horizantal rule line-->
+    <hr style="color: black; max-width: 100%;">
+    </hr>
+    <p class="footer-content">
+        <b>2025 &copy;</b> cloRaz Website | All Right Reserve.
+    </p>
+</div>
+    </div>
+    <script src="iframes-controls.js"></script>
+</body>
+</html>
