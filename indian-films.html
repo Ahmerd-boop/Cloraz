@@ -9,6 +9,45 @@
     <link rel="stylesheet" href="iframes.css" class="">
     <script async src="https://pagead2.googlesyndication.com/pagead2/js/adsbygoogle.js?client=ca-pub-5066628083376319" crossorigin="anonymous"></script>
 </head>
+<script>
+    let currentPlayer = null;
+const iframes = document.querySelectorAll('iframe');
+const players = [];
+iframes.forEach((iframe, index) => {
+    const player = new YT.Player(iframe, {
+        events: {
+            onStateChange: (event) => handleStateChange(event, player)
+        }
+    });
+    players.push(player);
+});
+function handleStateChange(event, player) {
+    if (event.data === YT.PlayerState.PLAYING) {
+        if (currentPlayer && currentPlayer !== player) {
+            currentPlayer.pauseVideo();
+        }
+        currentPlayer = player 
+    }
+}
+function onYouTubeIframeAPIReady() {
+    console.log("YouTube API is ready.");
+}
+const tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+const firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
+
+const iframe = document.querySelectorAll('iframe');
+iframes.forEach((iframe) => {
+    iframe.addEventListener('play', () => {
+        iframes.forEach((otherIframe) => {
+    if (otherIframe !== iframe) {
+        otherIframe.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    }
+});
+});
+});
+</script>
 <body>
     <!--main division-->
     <div class="main">
@@ -62,6 +101,5 @@
     </p>
 </div>
     </div>
-    <script src="iframes-controls.js"></script>
 </body>
 </html>

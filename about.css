@@ -98,14 +98,13 @@ p{
     text-decoration: none;
     color: red;
     text-align: center;
-    font-family: fantasy;
+    font-family: cursive;
     font-size: 30px;
 }
 .portfolio-link:hover{
     text-decoration: none;
     color: black;
     text-align: center;
-    font-family: fantasy;
     font-size: 30px;
 }
 /*headings style*/
@@ -117,7 +116,7 @@ h2{
 }
 /*form*/
 .form-container{
-    margin: 40px;
+    margin: 140px;
     padding: 15px;
     background: #333;
     color: white;
@@ -197,14 +196,12 @@ h3{
         text-decoration: none;
         color: red;
         text-align: center;
-        font-family: fantasy;
         font-size: 20px;
     }
     .portfolio-link:hover{
         text-decoration: none;
         color: black;
         text-align: center;
-        font-family: fantasy;
         font-size: 20px;
     }
     /*form*/
